@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bytedance.component.vedioplayer.MyVideoView
+        android:id="@+id/video_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <!--底部状态栏-->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#CC282828"
+        android:padding="3dip"
+        android:id="@+id/video_controller_layout"
+        android:gravity="center"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/video_pause_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="10dip"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:id="@+id/video_pause_img"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/icon_video_play"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="0dip">
+
+            <SeekBar
+                android:id="@+id/video_seek_bar"
+                style="@android:style/Widget.Holo.SeekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/video_cur_time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="/"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/video_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/screen_status_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/screen_status_img"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@mipmap/iconfont_enter_32"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
